@@ -1,18 +1,18 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 B1 Final Project  << Semester, Year >>
+# FireBall Survival
+## CS110 B1 Final Project  Fall Semester 2024
 
 ## Team Members
 
-<< List team member names >>
+Matthew Ko
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+This project will be a game where you control a simple character to survive as long as you can while fireballs shoot at you
 
 ***    
 
@@ -30,11 +30,11 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. Increasing difficulty as time goes on
+2. Timer to compare to friends
+3. Different types of fireballs
+4. 2 different characters to play
+5. difficulty options
 
 ### Classes
 
