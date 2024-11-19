@@ -22,7 +22,7 @@ This project will be a game where you control a simple character to survive as l
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg)
+![initial gui](C:\Users\han10\OneDrive\Desktop\Vscode stuff\portfolio-MatthewKo-14\portfolio\final-project-team-matty\template_final_project-master\assets\gui.jpg)
 
 ### Final Design
 
