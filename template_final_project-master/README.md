@@ -12,7 +12,9 @@ Matthew Ko
 
 ## Project Description
 
-This project will be a game where you control a simple character to survive as long as you can while fireballs shoot at you
+This project will be a game where you control a simple character to survive as long as you can while fireballs shoot at you 
+2 options for difficulty which are normal and hard mode which will change the speed of the fireballs at the start to make them harder to dodge
+2 characters to pick from, with one being slower but small while one is faster but normal sized
 
 ***    
 
@@ -34,7 +36,7 @@ This project will be a game where you control a simple character to survive as l
 2. Timer to compare to friends
 3. Different types of fireballs
 4. 2 different characters to play
-5. difficulty options
+5. 2 difficulty options
 
 ### Classes
 
