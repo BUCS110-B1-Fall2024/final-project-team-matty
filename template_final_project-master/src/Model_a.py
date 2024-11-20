@@ -14,8 +14,8 @@ class left:
 
 class up:
     def __init__(self,y):
-        self.x=y
+        self.y=y
 
-class right:
+class down:
     def __init__(self,y):
-        self.x=-y
+        self.y=-y
