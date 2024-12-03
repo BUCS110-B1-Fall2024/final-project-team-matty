@@ -22,7 +22,7 @@ This project will be a game where you control a simple character to survive as l
 
 ### Initial Design
 
-![initial gui](C:\Users\han10\OneDrive\Desktop\Vscode stuff\portfolio-MatthewKo-14\portfolio\final-project-team-matty\template_final_project-master\assets\gui.jpg)
+![initial gui](assets/gui.jpg)
 
 ### Final Design
 
@@ -46,6 +46,8 @@ This project will be a game where you control a simple character to survive as l
 
 | Step                 |Procedure             |Expected Results                   |
 |----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+|  1 test Movement | Press Up/down/left/right|character will move up/down/left/right  |
+|  2 Test menus    |Click the start button to see if it starts game, click Quit button to test if it ends the game, and back to menu button sends you back to start|Start button starts the gane, and quit button exits the game and back to menu button sends you back      |
+   3 Test game over screen|Test if game over screen shows up if I force a game over by making a game over button|Game over screen appears when i click escape key and exit 
+   4 Test collision|Test if touching the fire rectangle can interact with character or if character can go out of bounds|Character can't go out of bounds and collides with fire
+   5 Test errors|Test any keys that might cause an error|No errors caused by any invalid inputs
