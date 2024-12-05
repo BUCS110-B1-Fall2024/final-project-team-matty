@@ -1,12 +1,15 @@
 import pygame
 import pygame_menu
+from src.Model_a import *
+
 
 
 width = 500
 height = 500
-bg_color = "black" 
+bg_color = (0,0,0) 
 
-class Controller:
+
+class controller:
     def __init__ (self):
         pygame.init()
         
@@ -35,66 +38,60 @@ class Controller:
         self.menu.add.button("Quit", self.quit_game)  
         self.menu.mainloop(self.screen) 
 
+
     def gameloop(self):
-
-        char_x = 0
-        char_y = 0
-        char_width=25 
-        char_height = 25
-        char_speed=0.25
-        char_color="Blue"
-
-        fire_x= 50 
-        fire_y = 25
-        fire_width=25
-        fire_height =25
-        fire_speed=0.25
-        fire_color="Red"
-
         running = True
         while running:
             self.screen.fill(bg_color)  
+            person=player()
+            enemy=fire()
             
-            
-            char = pygame.Rect(char_x, char_y, char_width, char_height)
-            pygame.draw.rect(self.screen, char_color, char)
-            fire = pygame.Rect(fire_x, fire_y, fire_width, fire_height)
-            pygame.draw.rect(self.screen, fire_color, fire)
-            
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    running = False
-                if char.colliderect (fire):
-                  print('touch')
-             
+
+
+            gamer = pygame.Rect(person.x, person.y, person.width, person.height)
+            pygame.draw.rect(self.screen, person.color, gamer)
+            fireball = pygame.Rect(enemy.x, enemy.y, enemy.width, enemy.height)
+            pygame.draw.rect(self.screen, enemy.color, fireball)
+
+
 
             keys = pygame.key.get_pressed() 
-            if keys[pygame.K_LEFT] and char_x >= 0:
-              char_x-= char_speed
-            if keys[pygame.K_RIGHT] and char_x <= 475:
-              char_x+= char_speed        
-            if keys[pygame.K_DOWN] and char_y <= 475:
-              char_y+= char_speed
-            if keys[pygame.K_UP] and char_y>=0:
-              char_y-= char_speed          
+            for event in pygame.event.get():
+              if event.type == pygame.KEYDOWN:
+                if keys[pygame.K_LEFT] and person.x >= 0:
+                  person.x -= person.speed
+            if keys[pygame.K_RIGHT] and person.x <= 475:
+              person.x += person.speed
+            if keys[pygame.K_DOWN] and person.y <= 475:
+              person.y -= person.speed
+            if keys[pygame.K_UP] and person.y>=0:
+              person.y += person.speed         
             if keys[pygame.K_ESCAPE]:
               self.endloop()
         
             pygame.display.update()
 
-        self.state = "End"  
+
+             
 
     def endloop(self):
         self.menu.clear()  
+        self.menu = pygame_menu.Menu("Game Over", width, height) 
         self.menu.add.label("You lost!", font_size=16)
         self.menu.add.button("Back to menu", self.start_loop)
         self.menu.draw(self.screen)
         pygame.display.flip()
-
+        for event in pygame.event.get():
+          if event.type == pygame.QUIT:
+            running = False
+            if running == False:
+                  pygame.quit()
+            if gamer.colliderect(fireball):
+                  print('touch')
+             
     def quit_game(self):
         pygame.quit()
         exit()  
+        
+        
 
-if __name__ == '__main__':
-    controller = Controller()
-    controller.mainloop()
