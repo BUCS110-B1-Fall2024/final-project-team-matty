@@ -1,7 +1,7 @@
 
 
 class fire:
-    def __init__(self,x=250,y=250,speed=0.25,width=15,height=15,color=[1,0,0]):
+    def __init__(self,x=0,y=0,width=30,height=30,speed=0.1,color='red'):
         self.speed=speed
         self.width=width
         self.height=height
@@ -10,7 +10,7 @@ class fire:
         self.color=color
 
 class player:
-    def __init__(self,x=150,y=150,width=15,height=15,speed=0.25,color=[0,0,225]):
+    def __init__(self,x=150,y=150,width=15,height=15,speed=0.125,color='blue'):
         self.width = width
         self.height = height
         self.x = x
